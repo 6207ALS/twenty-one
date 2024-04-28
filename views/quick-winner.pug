@@ -1,0 +1,31 @@
+extends layout
+
+block header
+  if winner === "human"
+    h1 Congratulations! You Win!
+  else if winner === "dealer"
+    h1 Sorry! You Lose!
+  else
+    h1 It's a Tie!
+
+block main
+  h2 Dealer's Hand
+  h3 Hand Total: #{dealer.handTotal()}
+  div.dealer_container
+    for card, index in dealer.hand
+      img(src=`/images/cards/${card.value}_of_${card.suit}.png`
+          alt=`${card.value} of ${card.suit}`)
+
+  div.buttons_container
+    each button in buttons
+      form(action="/quickgame/winner" method="post")
+        input(type="hidden" name="player" value=player)
+        button(name="choice" value=button)=capitalize(button)
+
+  div.human_container
+    each card in human.hand
+        img(src=`/images/cards/${card.value}_of_${card.suit}.png`
+            alt=`${card.value} of ${card.suit}`)
+  h2 Player's Hand
+  h3 Hand Total: #{human.handTotal()}
+  

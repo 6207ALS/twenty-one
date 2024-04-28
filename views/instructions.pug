@@ -1,0 +1,51 @@
+extends layout
+
+block header
+  h1 Welcome to Twenty-One!
+
+block main
+  main
+    div.main_container
+      p 
+        | The game Twenty-One is a stripped down version of Blackjack. As such, 
+        | Twenty-One doesn't have splits, double-downs, and other complex plays. 
+
+      h2 Rules of Twenty-One:
+      ul
+        li 
+          <span> Deck: </span> Start with a standard 52-card deck consisting of 
+          | the 4 suits (Hearts, Diamonds, Clubs, and Spades), and 13 values 
+          | (2, 3, 4, 5, 6, 7, 8, 9, 10, Jack, Queen, King, Ace).
+        li
+          <span> Goal: </span> The goal of Twenty-One is to try to get as close to 
+          | 21 as possible without going over. If you go over 21, it's a bust, and 
+          | you lose.
+        li
+          <span> Setup: </span> The game consists of a <strong> dealer </strong> and 
+          | a <strong> player </strong> (you). Both participants are initially 
+          | dealt a hand of two cards. The player can see their 2 cards, but can 
+          | only see <em>one</em> of the dealer's cards.
+        li
+          <span> Card Values: </span> The cards with numbers 2 through 10 are worth 
+          | their face value. The Jack, Queen, and King are each worth 10. The Ace 
+          | can be worth 1 or 11 depending on circumstances. Its value will be 1 if
+          | 11 will result in a bust.
+        li
+          <span> Player Turn: </span> You, the player, will always goes first, and 
+          | can decide to either hit or stay. A hit means you want to be dealt 
+          | another card. If your hand's total exceeds 21, you bust and lose the 
+          | game. "Stay" means you end your turn and the dealer plays their turn. 
+          | Make decisions to hit or stay based on your hand total and what you 
+          | think the dealer has.
+        li
+          <span> Dealer Turn: </span> When the player stays, it's the dealer's turn. 
+          | The dealer will keep choosing hit as they see fit, until they bust or
+          | choose to stay. How the dealer makes their decisions is a secret! 
+        li
+          <span> Comparing Cards: </span> When both the player and the dealer stay, 
+          | their hand totals are compared. Whoever has the highest value wins!
+        li
+          <span> Game Modes: </span> Players can choose to play either <strong>
+          | Quick Game</strong> or <strong>Full Game</strong>. Quick Game
+          | consists of one round, whereas Full Game consists of five rounds. In
+          | Full Game mode, the first to win three rounds wins the game!

@@ -1,0 +1,137 @@
+html {
+  font-family: 'PT Sans';
+}
+
+body {
+  background-color: rgb(145, 180, 255);
+  min-height: 100vh;
+
+  padding: 0;
+  margin: 0;
+
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+main {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+
+  width: 100vw;
+}
+
+.main_container {
+  width: 60vw;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+p {
+  font-size: 20px;;
+  text-align: center;
+}
+
+h1 {
+  font-size: 60px;
+  text-align: center;
+  margin-bottom: 20px;
+}
+
+h2 {
+  font-size: 30px;
+  margin: 5px 0px 5px 0px;
+}
+
+h3 {
+  margin: 0;
+}
+
+li {
+  font-size: 20px;
+  margin-bottom: 0px
+}
+
+li span {
+  font-weight: bold;
+  margin-right: 2px;
+}
+
+button {
+  width: 360px;
+  height: 70px;
+
+  font-size: 30px;
+  border: none;
+  border-radius: 50px;
+  margin: 10px 0px;
+  background: linear-gradient(rgb(129, 169, 255), rgb(163, 145, 255));
+}
+
+.buttons_container {
+  height: 200px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.flash_container {
+  height: 60px;
+  width: 100vw;
+}
+
+.flash-msg {
+  background-color: rgba(149, 102, 230, 0.4);
+  text-align: center;
+  padding: 10px 0px 10px;
+}
+
+.dealer_container,
+.human_container {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+}
+
+.dealer_container {
+  margin: 20px 0px 20px 0px;
+}
+
+.human_container {
+  margin: 20px 0px 30px 0px;
+}
+
+.dealer_container:hover > img,
+.human_container:hover > img,
+.dealer_container:hover .hidden-card_wrapper {
+  margin: 0px 20px;
+}
+
+.hidden-card_wrapper {
+  background-image: url("/images/cards/question_mark.png");
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+  display: inline-block;
+  border-radius: 10px;
+  border: solid 1px;
+}
+
+.dealer_container div img {
+  visibility: hidden;
+}
+
+.dealer_container > img,
+.human_container > img,
+.hidden-card_wrapper {
+  width: 200px;
+  height: 290.4px;
+  margin: 0px -80px;
+  transition: margin 0.5s;
+}

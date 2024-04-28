@@ -1,0 +1,13 @@
+extends layout
+
+block header
+  h1 Twenty-One
+
+block main
+  main
+    div.main_container
+      form(action="/gamemodes" method="get")
+        button Play
+
+      form(action="/instructions" method="get")
+        button Instructions

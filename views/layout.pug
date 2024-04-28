@@ -1,0 +1,15 @@
+doctype html
+
+html
+  head
+    title Twenty-One
+    meta(charset="UTF-8")
+    link(rel="stylesheet" href="//fonts.googleapis.com/css?family=PT+Sans")
+    link(rel="stylesheet" href="/stylesheets/twenty-one.css")
+  body
+    div.flash_container
+      if flash
+        each msg in flash
+          h3.flash-msg= msg
+    block header
+    block main

@@ -1,0 +1,30 @@
+extends layout
+
+block header
+  h1 Quick Game
+
+block main
+  h2 Dealer's Hand
+  div.dealer_container
+    for card, index in dealer.hand
+      if index !== dealer.hand.length - 1
+        img(src=`/images/cards/${card.value}_of_${card.suit}.png`
+            alt=`${card.value} of ${card.suit}`)
+      else
+          div.hidden-card_wrapper
+            img(src=`/images/cards/${card.value}_of_${card.suit}.png`
+                alt=`${card.value} of ${card.suit}`)
+
+  div.buttons_container
+    each button in buttons
+      form(action="/quickgame" method="post")
+        input(type="hidden" name="player" value=player)
+        button(name="choice" value=button)=capitalize(button)
+
+  div.human_container
+    each card in human.hand
+        img(src=`/images/cards/${card.value}_of_${card.suit}.png`
+            alt=`${card.value} of ${card.suit}`)
+  h2 Player's Hand
+  - let humanTotal = human.handTotal()
+  h3 Hand Total: #{humanTotal}

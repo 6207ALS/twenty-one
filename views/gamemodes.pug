@@ -1,0 +1,13 @@
+extends layout
+
+block header
+  h1 Game Modes
+
+block main
+  main
+    div.main_container
+      form(action="/gamemodes" method="post")
+        button(name="choice" value="quickgame") Quick Game
+
+      form(action="/gamemodes" method="post")
+        button(name="choice" value="fullgame") Full Game
